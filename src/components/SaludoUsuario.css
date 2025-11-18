@@ -1,0 +1,28 @@
+.saludo-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    gap: 15px;
+}
+
+.saludo-texto {
+    font-weight: bold;
+}
+
+.saludo-link,
+.saludo-logout-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #d11a7b;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.saludo-logout-btn:hover {
+    background-color: #a71462;
+}

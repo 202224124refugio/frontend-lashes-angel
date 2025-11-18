@@ -1,0 +1,173 @@
+/* --- ImprimirComprobante.css --- */
+
+.comprobante-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    /* Fondo suave */
+    font-family: Arial, sans-serif;
+}
+
+.comprobante-container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+
+/* --- Estilos del 'Ticket' --- */
+
+.comprobante-ticket {
+    padding: 30px;
+    background: #fff;
+    /* Fondo blanco para la imagen */
+    border-bottom: 1px solid #eee;
+}
+
+.ticket-header {
+    text-align: center;
+    border-bottom: 2px dashed #e8a0bf;
+    /* Línea punteada rosa */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.ticket-header h2 {
+    margin: 0;
+    color: #d17a9e;
+    /* Rosa oscuro */
+    font-size: 2rem;
+    /* font-family: 'Great Vibes', cursive; (Si usas una fuente especial) */
+}
+
+.ticket-header h3 {
+    margin: 10px 0 5px;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.ticket-header p {
+    margin: 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.ticket-details dl {
+    margin: 0;
+}
+
+.ticket-details dt {
+    font-weight: 700;
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.ticket-details dd {
+    margin-left: 0;
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ticket-details .costo-total {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d17a9e;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.ticket-details .cita-id {
+    font-size: 0.8rem;
+    color: #aaa;
+    font-family: monospace;
+    word-wrap: break-word;
+}
+
+.ticket-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed #e8a0bf;
+}
+
+.ticket-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 600;
+}
+
+
+/* --- Estilos de los Botones --- */
+
+.comprobante-actions {
+    padding: 25px 30px;
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-download,
+.btn-home {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* Importante para el padding */
+}
+
+.btn-download {
+    background: linear-gradient(90deg, #e8a0bf, #d17a9e);
+    color: white;
+}
+
+.btn-download:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 15px rgba(210, 122, 158, 0.4);
+}
+
+.btn-home {
+    background: transparent;
+    color: #d17a9e;
+    border: 2px solid #e8a0bf;
+}
+
+.btn-home:hover {
+    background: #fdf8f8;
+    /* Rosa muy pálido */
+}
+
+
+/* --- Estados de carga y error --- */
+
+.loader,
+.error-msg {
+    font-size: 1.2rem;
+    color: #555;
+    padding: 40px;
+    text-align: center;
+}
+
+.error-msg {
+    color: #d9534f;
+}

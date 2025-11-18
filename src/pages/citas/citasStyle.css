@@ -1,0 +1,137 @@
+/* --- CitasStyle.css --- */
+
+.citas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fdf8f8;
+    /* Un fondo rosa muy pálido */
+    min-height: 80vh;
+}
+
+.citas-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.citas-form h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    /* Puedes usar la fuente 'elegante' de tu proyecto */
+    /* font-family: 'Great Vibes', cursive; */
+}
+
+.citas-form p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #e8a0bf;
+    /* Un rosa para el 'focus' */
+    box-shadow: 0 0 0 3px rgba(232, 160, 191, 0.2);
+}
+
+
+/* Estilo para las 'pestañas' de catálogo y ofertas */
+
+optgroup {
+    font-weight: bold;
+    font-style: italic;
+    color: #e8a0bf;
+    background-color: #fcfcfc;
+}
+
+
+/* Fila para día y hora */
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    width: 100%;
+    /* Ocupan el espacio disponible */
+}
+
+
+/* Estilo específico para el costo */
+
+.costo-display {
+    margin-top: 25px;
+}
+
+.costo-final {
+    background-color: #f9f9f9;
+    font-size: 1.4rem !important;
+    font-weight: 700;
+    color: #e8a0bf !important;
+    /* Rosa fuerte */
+    text-align: center;
+    border: 1px dashed #e8a0bf !important;
+}
+
+
+/* Botón de envío */
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #e8a0bf, #d17a9e);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(210, 122, 158, 0.4);
+}

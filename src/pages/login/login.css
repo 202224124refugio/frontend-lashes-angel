@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #fceee9;
+    --text-dark: #222;
+    --text-light: #f9f9f9;
+    --accent-color: #d4a5a5;
+    --button-dark: #333;
+}
+
+.login-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.login-header {
+    width: 100%;
+    padding: 1.5rem 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+}
+
+.login-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.login-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.login-form {
+    background-color: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(212, 165, 165, 0.5);
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid var(--button-dark);
+    background-color: var(--button-dark);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.login-submit-btn:hover {
+    opacity: 0.85;
+}
+
+.login-footer-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.login-footer-link a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 2rem 1.5rem;
+    }
+}
