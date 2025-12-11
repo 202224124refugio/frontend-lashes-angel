@@ -1,3 +1,4 @@
+/*
 .admin-card {
     width: 100%;
     max-width: 1200px;
@@ -8,16 +9,16 @@
 .admin-select {
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #1e1c1c;
     border-radius: 5px;
     font-size: 1rem;
     box-sizing: border-box;
-    background-color: #ffffff69;
-    /* Asegura fondo blanco */
+    background-color: #faf6f696;
+    /* Asegura fondo blanco *
 }
 
 
-/* --- Divisor --- */
+/* --- Divisor --- *
 
 .admin-divider {
     border: none;
@@ -26,7 +27,7 @@
 }
 
 
-/* --- Contenido del panel --- */
+/* --- Contenido del panel --- *
 
 .admin-panel-content h3 {
     font-size: 1.5rem;
@@ -39,12 +40,12 @@
 
 .admin-panel-content h4 {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #242222;
     margin-bottom: 1rem;
 }
 
 
-/* --- Estilos para listas de items (Ofertas, Características) --- */
+/* --- Estilos para listas de items (Ofertas, Características) --- *
 
 .admin-item-list {
     margin-top: 1rem;
@@ -55,7 +56,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid #181717;
     border-radius: 5px;
     margin-bottom: 0.5rem;
 }
@@ -70,7 +71,7 @@
 }
 
 
-/* --- Botones secundarios y de peligro --- */
+/* --- Botones secundarios y de peligro --- *
 
 .login-submit-btn.secondary {
     background-color: transparent;
@@ -85,9 +86,9 @@
 
 .login-submit-btn.danger {
     background-color: #d9534f;
-    /* Rojo */
-    border-color: #d9534f;
-    color: white;
+    /* Rojo *
+border-color: #d9534f;
+color: white;
 }
 
 .login-submit-btn.danger:hover {
@@ -101,13 +102,13 @@
 }
 
 
-/* --- Formularios internos --- */
+/* --- Formularios internos --- *
 
 .admin-form textarea {
-    /* Estilo base para textarea */
+    /* Estilo base para textarea *
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc1c1;
     border-radius: 5px;
     font-size: 1rem;
     font-family: inherit;
@@ -164,7 +165,7 @@
 
 /* -----------------------------
    PANEL DE CITAS
-   ----------------------------- */
+   ----------------------------- 
 
 .citas-table {
     width: 100%;
@@ -186,7 +187,7 @@
 }
 
 
-/* Modo edición */
+/* Modo edición 
 
 .citas-edit-row input {
     width: 100%;
@@ -199,7 +200,7 @@
 }
 
 
-/* Botones alineados */
+/* Botones alineados 
 
 .citas-actions {
     display: flex;
@@ -207,7 +208,7 @@
 }
 
 
-/* Botón pequeño */
+/* Botón pequeño 
 
 .btn-small {
     padding: 6px 12px;
@@ -215,14 +216,14 @@
 }
 
 
-/* Panel ancho completo */
+/* Panel ancho completo 
 
 .admin-panel-content {
     width: 100%;
 }
 
 
-/* Card que contenga el panel con buen ancho */
+/* Card que contenga el panel con buen ancho 
 
 .admin-card {
     width: 100%;
@@ -230,4 +231,142 @@
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+}
+
+*/
+:root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nombre-pagina {
+    text-align: center;
+    margin: 5rem 0;
+    font-weight: 700;
+}
+
+.descripcion-pagina {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.contenedor-admin {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontal */
+    align-items: center;
+    /* Centra vertical */
+    height: 100vh;
+    /* Toda la pantalla */
+}
+
+
+
+.formulario2 {
+    margin-top: 5rem auto;
+    width: 100%;
+
+}
+
+.campo2 {
+    display: flex;
+    margin-bottom: 2rem;
+    padding-right: 3rem;
+    align-items: center;
+
+    label {
+        flex: 0 0 10rem;
+
+    }
+
+    input {
+        flex: 1;
+        border: none;
+        padding: calc(5rem/ 4);
+        border-radius: 1rem;
+
+        &:disabled {
+            background-color: lighten(var(--oscuro), 30%);
+            color: var(--blanco);
+            cursor: not-allowed;
+        }
+    }
+
+    select {
+        flex: 1;
+        border: none;
+        padding: calc(5rem/ 4);
+        border-radius: 1rem;
+
+        &:disabled {
+            background-color: lighten(var(--oscuro), 30%);
+            color: var(--blanco);
+            cursor: not-allowed;
+        }
+    }
+
+    textarea {
+        flex: 1;
+        border: none;
+        padding: calc(5rem/ 4);
+        border-radius: 1rem;
+
+        &:disabled {
+            background-color: lighten(var(--oscuro), 30%);
+            color: var(--blanco);
+            cursor: not-allowed;
+        }
+    }
+}
+
+.boton2 {
+    background-color: var(--acento);
+    color: var(--blanco);
+    padding: .9rem 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton2 {
+        width: auto;
+    }
+}
+
+
+.boton3 {
+    background-color: var(--acento);
+    color: var(--blanco);
+    padding: .7rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton3 {
+        width: auto;
+    }
 }

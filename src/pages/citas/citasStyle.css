@@ -1,4 +1,9 @@
 /* --- CitasStyle.css --- */
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .citas-container {
     display: flex;
@@ -8,6 +13,10 @@
     background-color: #fdf8f8;
     /* Un fondo rosa muy pálido */
     min-height: 80vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
 }
 
 .citas-form {
