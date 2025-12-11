@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './citasStyle.css';
 import { useNavigate } from 'react-router-dom';
 
+// IMPORTANTE: leer la URL del backend desde la variable de entorno
+const API_URL = import.meta.env.VITE_API_URL;
+
 const Citas = () => {
 
   const navigate = useNavigate();
@@ -20,10 +23,13 @@ const Citas = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(null);
 
+  // ================================
+  // CARGAR SERVICIOS / CATÁLOGO
+  // ================================
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const res = await fetch("/api/catalogo/");
+        const res = await fetch(`${API_URL}/api/catalogo/`);
         const data = await res.json();
         setProductos(data);
       } catch (error) {
@@ -53,6 +59,9 @@ const Citas = () => {
     if (message) setMessage(null);
   };
 
+  // ================================
+  // CREAR UNA CITA
+  // ================================
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage(null);
@@ -88,7 +97,8 @@ const Citas = () => {
     };
 
     try {
-      const response = await fetch('/api/citas', {
+      // RUTA CORREGIDA
+      const response = await fetch(`${API_URL}/api/citas`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -120,44 +130,6 @@ const Citas = () => {
 
   return (
     <div className="contenedor-app">
-      {/*
-      <style>{`
-        .citas-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 20px;
-          font-family: Arial, sans-serif;
-        }
-        .citas-form {
-          background: #ffffff;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-          padding: 24px;
-          width: 100%;
-          max-width: 500px;
-        }
-        .form-message.success {
-          color: #155724;
-          background-color: #d4edda;
-          border: 1px solid #c3e6cb;
-          padding: 10px;
-          border-radius: 5px;
-          margin-top: 15px;
-          text-align: center;
-        }
-        .form-message.error {
-          color: #721c24;
-          background-color: #f8d7da;
-          border: 1px solid #f5c6cb;
-          padding: 10px;
-          border-radius: 5px;
-          margin-top: 15px;
-          text-align: center;
-        }
-      `}</style>
-      */}
       <div className="imagen"></div>
 
       <div className="app">
@@ -195,7 +167,6 @@ const Citas = () => {
             </select>
           </div>
 
-
           <div className="campo2">
             <label>Día:</label>
             <input type="date" name="dia" value={formData.dia} onChange={handleChange} min={new Date().toISOString().split("T")[0]} required />
@@ -205,7 +176,6 @@ const Citas = () => {
             <label>Hora:</label>
             <input type="time" name="hora" value={formData.hora} onChange={handleChange} min="10:00" max="19:00" step="3600" required />
           </div>
-
 
           {message && (
             <div className={`form-message ${message.type}`}>{message.text}</div>
